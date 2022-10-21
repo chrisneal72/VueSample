@@ -1,0 +1,7 @@
+
+$nav-links-font-size: rem-calc(12);
+$nav-links-line-height: rem-calc(16);
+$nav-links-padding: rem-calc(20);
+$nav-links-margin-bottom: rem-calc(12);
+
+$nav-height: $nav-links-line-height + ($nav-links-padding * 2) + $nav-links-margin-bottom;

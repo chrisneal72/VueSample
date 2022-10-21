@@ -1,0 +1,27 @@
+@import './scss/devices';
+@import './scss/settings';
+@import './scss/test';
+// @import 'foundation';
+@import "../node_modules/foundation-sites/scss/foundation";
+@import "~foundation-sites/scss/foundation";
+@include foundation-global-styles;
+@include foundation-xy-grid-classes;
+@include foundation-grid;
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+@include foundation-typography;
+@include foundation-forms;
+@include foundation-table;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-badge;
+@include foundation-button;
+@include foundation-button-group;
+@include foundation-visibility-classes;
+@include foundation-accordion;
+@include add-foundation-colors;
+
+@import './scss/layout';
+@import './scss/forms';
+@import './scss/phase2';
+@import './scss/phase3';

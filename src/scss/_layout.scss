@@ -1,0 +1,266 @@
+@import 'nav';
+
+// Globals
+// snake
+@keyframes move-snake {
+  0% {
+    transform: translateX(-100%);
+    width: 85%;
+  }
+  100% {
+    transform: translateX(50%);
+    width: 200%;
+  }
+}
+
+$snake-height: rem-calc(6);
+
+.snake {
+  width: 100%;
+  height: $snake-height;
+  overflow: hidden;
+
+  svg {
+    width: 200%;
+    animation: move-snake 1.8s forwards infinite;
+
+    #gradient {
+      stop:first-child {
+        stop-color: rgba($white, 0.5);
+      }
+      stop:last-child {
+        stop-color: rgba($white, 1);
+      }
+    }
+  }
+}
+
+// Layout and structure
+html {
+  background-color: $base-color-hover;
+  overflow-x: hidden;
+
+  @include breakpoint(320 down) {
+    font-size: 5vw;
+  }
+}
+
+body {
+  font-size: 0.875rem;
+
+  .intro-content {
+    padding-top: rem-calc(70);
+
+    @include breakpoint(medium) {
+      padding-top: rem-calc(100);
+    }
+  }
+}
+
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  @include secondaryBold;
+}
+
+sub {
+  &.more-space {
+    bottom: -0.55em !important;
+  }
+}
+
+h1,
+.h1 {
+  font-size: 40px;
+  line-height: 38px;
+
+  @include breakpoint(small down) {
+    font-size: 28px;
+    line-height: 31px;
+  }
+
+  &.alt {
+    color: $base-color;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 24px;
+  line-height: 27px;
+  color: $base-color-hover;
+
+  @include breakpoint(small down) {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  &.alt {
+    color: $white;
+  }
+}
+
+.subheader {
+  font-size: 20px;
+}
+
+.action {
+  .button {
+    width: 210px;
+    margin: 0 auto;
+  }
+}
+
+strong, b {
+  @include primaryFontBold;
+  font-weight: 900;
+}
+
+sup {
+  top: -0.2em;
+  font-weight: 400 !important;
+}
+
+sub {
+  bottom: -0.35em;
+}
+
+.disclaimer {
+  font-size: 14px;
+  line-height: 16px;
+
+  @include breakpoint(small down) {
+    font-size: 13px;
+    line-height: 13px;
+  }
+
+  &.light {
+    color: #b9b9b9;
+    @include primaryFontBold;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+.afterlink {
+  margin-left: rem-calc(-4);
+}
+
+.white {
+  color: #fff;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.pink {
+  color: $pink;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+
+// Buttons
+.button {
+  padding: 0.3rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 900;
+
+  &:disabled {
+    background-color: #7d7d7d;
+  }
+
+  i {
+    padding-left: 2px;
+  }
+
+  &.reverse {
+    background-color: $white;
+    color: $base-color;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  &.inline {
+    display: inline-flex;
+  }
+}
+
+.button.white {
+  background: $white;
+  color: $base-color;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s ease;
+  }
+}
+
+.button.blue {
+  background: $secondary-color-accent;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s ease;
+  }
+}
+
+// Card styles
+.card {
+  background-color: $white !important;
+  color: $black;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .header {
+    color: $black;
+  }
+
+  label {
+    color: $black;
+  }
+
+  .card-divider {
+    background-color: get-color(success);
+    color: $white;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .header {
+      color: $black;
+    }
+  }
+}
+
+
+.third-party-optin {
+  z-index: 300 !important;
+}
+
+.tooltip-container {
+  top: rem-calc(-100) !important;
+}

@@ -1,0 +1,23 @@
+$phone-width: 599px;
+$tablet-portrait-width: 600px;
+$tablet-landscape-width: 900px;
+$desktop-width: 1200px;
+$wide-desktop-width: 1440px;
+
+$is-tablet-portrait-up: "(min-width: #{$tablet-portrait-width})";
+$is-tablet-portrait-only: "(min-width: #{$tablet-portrait-width}) and (max-width: #{$tablet-landscape-width - 1})";
+$is-tablet-landscape-up: "(min-width: #{$tablet-landscape-width})";
+$is-tablet-landscape-only: "(min-width: #{$tablet-landscape-width}) and (max-width: #{$desktop-width - 1})";
+$is-desktop-only: "(min-width: #{$desktop-width})";
+$is-phone-only: "(max-width: #{$phone-width})";
+$is-hi-dpi: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)";
+
+:root {
+  --is-tablet-portrait-up: (min-width: #{$tablet-portrait-width});
+  --is-tablet-portrait-only: (min-width: #{$tablet-portrait-width}) and (max-width: #{$tablet-landscape-width - 1});
+  --is-tablet-landscape-up: (min-width: #{$tablet-landscape-width});
+  --is-tablet-landscape-only: (min-width: #{$tablet-landscape-width}) and (max-width: #{$desktop-width - 1});
+  --is-desktop-only: (min-width: #{$desktop-width});
+  --is-phone-only: (max-width: #{$phone-width});
+  --is-hi-dpi: only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5);
+}

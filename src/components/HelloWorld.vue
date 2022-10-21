@@ -1,6 +1,20 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+
+  <h1>{{ msg }}</h1>
+  
+  <div class="pl-view-welcome grid-container">
+    <div class="grid-x grid-margin-x align-center">
+      <div class="cell small-12 medium-6 text-center pl-view-welcome__intro-content">
+        <p>Hi</p>
+      </div>
+      <div class="cell small-12 medium-6 text-center pl-view-welcome__intro-content">
+        <p>Hi</p>
+      </div>
+    </div>
+  </div>
+
+
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the

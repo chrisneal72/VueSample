@@ -1,0 +1,39 @@
+
+.test__messages {
+  &__name {
+    background-color: #19243b;
+    color: #ffeee3;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+
+  &__fail,
+  &__pass {
+    font-size: 0.75rem;
+  }
+  
+  &__fail {
+    background-color: #c0165d;
+    color: #ffeee3;
+    font-weight: bold;
+  }
+  
+  &__pass {
+    background-color: #a0f072;
+    color: #19243b;
+  }
+  
+  &__time {
+    color: #19243b;
+    background-color: #ffeee3;
+    font-weight: lighter;
+    line-height: 1rem;
+  }
+  
+  &__description {
+    color: #19243b;
+    background-color: #ffeee3;
+    font-weight: lighter;
+  }
+}
