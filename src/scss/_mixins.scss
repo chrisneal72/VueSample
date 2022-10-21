@@ -31,7 +31,22 @@
   }
 }
 
-// @mixin primaryFont {
-//   font-family: 'AmsiThin', Arial, sans-serif;
-// }
+@mixin primaryFont {
+  font-family: 'AmsiThin', Arial, sans-serif;
+}
 
+@mixin primaryFontBold {
+  font-family: 'AmsiBlack', Arial, sans-serif;
+}
+
+@mixin secondaryFont {
+  font-family: 'cut_aboveextended', sans-serif;
+}
+
+@mixin secondaryMedium {
+  font-family: 'cut_aboveregular', sans-serif;
+}
+
+@mixin secondaryBold {
+  font-family: 'AmsiBlack', Arial, sans-serif;
+}
