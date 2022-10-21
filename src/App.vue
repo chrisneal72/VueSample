@@ -4,7 +4,7 @@
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/>
-</template>./components/Landing.vue
+</template>./components/Landing/index.vue
 
 <style>
 #app {
