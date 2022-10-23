@@ -24,8 +24,8 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-// // Router
-// app.use("/api/sample", sample);
+// Router
+app.use("/api/sample", sample);
 
 connectToDatabase();
 

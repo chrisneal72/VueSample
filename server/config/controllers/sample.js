@@ -1,5 +1,13 @@
 const Sample = require("../models/sample");
 
+// @desc    Get all samples
+// @route   GET /api/sample
+exports.getSample = async (req, res, next) => {
+  const sample = await Sample.find();
+
+  res.status(200).json({ success: true, data: sample });
+};
+
 // @desc    Get single sample
 // @route   GET /api/sample/:id
 exports.getSample = async (req, res, next) => {
