@@ -4,7 +4,7 @@ const Sample = require("../models/sample");
 // @route   GET /api/sample/:id
 exports.getSample = async (req, res, next) => {
   const sample = await Sample.find(
-    { title: req.params.id }
+    // { title: req.params.id }
   );
 
   res.status(200).json({ success: true, data: sample });

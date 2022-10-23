@@ -1,7 +1,14 @@
 <template>
   <div class="data-view">
     <h1>This page will display Data</h1>
-    {{ samples }}
+    <div class="pl-view-welcome grid-container">
+      <div class="grid-x grid-margin-x align-center">
+         <div v-for="(sample, i) in samples" :key="i" class="cell small-12 medium-6">
+          <h1>{{ sample.title }}</h1>
+          <p v-html="sample.bodyCopy" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -15,17 +22,17 @@ export default {
       samples: [],
       currentSample: null,
       currentIndex: -1,
-      title: ""
+      title: "",
     };
   },
   methods: {
     retrieveSamples() {
       SampleDataService.getAll()
-        .then(response => {
-          this.samples = response.data;
-          console.log(response.data);
+        .then((response) => {
+          this.samples = response.data.data;
+          console.log(response.data.data);
         })
-        .catch(e => {
+        .catch((e) => {
           console.log(e);
         });
     },
@@ -43,29 +50,28 @@ export default {
 
     removeAllSamples() {
       SampleDataService.deleteAll()
-        .then(response => {
+        .then((response) => {
           console.log(response.data);
           this.refreshList();
         })
-        .catch(e => {
+        .catch((e) => {
           console.log(e);
         });
     },
-    
+
     searchTitle() {
       SampleDataService.findByTitle(this.title)
-        .then(response => {
+        .then((response) => {
           this.samples = response.data;
           console.log(response.data);
         })
-        .catch(e => {
+        .catch((e) => {
           console.log(e);
         });
-    }
+    },
   },
   mounted() {
     this.retrieveSamples();
-    console.log('Mounted');
-  }
+  },
 };
 </script>

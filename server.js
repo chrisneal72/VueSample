@@ -5,12 +5,18 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const connectToDatabase = require("./config/db");
 const sample = require("./config/routes/sample");
+const cors = require("cors");
 
 // const users = require("./routes/users");
 // const protected = require("./routes/protected");
 
 // Middleware
 app.use(express.json());
+
+var corsOptions = {
+  origin: "http://localhost:8080"
+};
+app.use(cors(corsOptions));
 
 // Router
 app.use("/api/sample", sample);
