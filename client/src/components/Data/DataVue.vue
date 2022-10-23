@@ -1,6 +1,6 @@
 <template>
   <div class="data-view">
-    <h1>This page will display Data</h1>
+    <h1>This page will display data</h1>
     <div class="pl-view-welcome grid-container">
       <div class="grid-x grid-margin-x align-center">
          <div v-for="(sample, i) in samples" :key="i" class="cell small-12 medium-6">

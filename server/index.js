@@ -1,15 +1,18 @@
 require("dotenv").config();
 const express = require("express");
+const bodyParser = require('body-parser');
 const app = express();
-const serveStatic = require("serve-static");
-const path = require("path");
 const PORT = process.env.PORT || 5000;
 const connectToDatabase = require("./config/db");
 const sample = require("./config/routes/sample");
 const cors = require("cors");
 
-// Middleware
 app.use(express.json());
+
+// Middleware
+// app.use(express.json());
+app.use(bodyParser.json());
+app.use(cors());
 
 //here we are configuring dist to serve app files
 if (process.env.NODE_ENV === "production") {
@@ -20,15 +23,9 @@ if (process.env.NODE_ENV === "production") {
   app.get(/.*/, (req, res) => res.sendFile(__dirname + "/public/index.html"));
 }
 
-// var corsOptions = {
-//   origin: "http://localhost:8080",
-// };
-// app.use(cors(corsOptions));
-app.use(cors());
 
-// Router
-app.use("/api/sample", sample);
-// app.use("/api/users", users);
+// // Router
+// app.use("/api/sample", sample);
 
 connectToDatabase();
 

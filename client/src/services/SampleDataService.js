@@ -1,5 +1,6 @@
 import http from "./API";
 
+
 class SampleDataService {
   getAll() {
     return http.get("/api/sample");
