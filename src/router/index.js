@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Landing from '../components/Landing/HomeVue.vue'
+import Landing from '@/components/Landing/index.vue'
 
 const routes = [
   {
@@ -14,6 +14,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../components/About/AboutVue.vue')
+  },
+  {
+    path: '/data',
+    name: 'data',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../components/Data/DataVue.vue')
   }
 ]
 

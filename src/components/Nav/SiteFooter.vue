@@ -7,12 +7,12 @@
 
 <script>
 // @ is an alias to /src
-import HomeBody from '@/components/Landing/HomeBody.vue'
+// import HomeBody from '@/ClientApp/components/Landing/HomeBody.vue'
 
-export default {
-  name: 'HomeView',
-  components: {
-    HomeBody
-  }
-}
+// export default {
+//   name: 'HomeView',
+//   components: {
+//     HomeBody
+//   }
+// }
 </script>
