@@ -14,18 +14,17 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
 
+// Router
+app.use("/api/sample", sample);
+
 //here we are configuring dist to serve app files
 if (process.env.NODE_ENV === "production") {
   // Static folder
-  app.use(express.static(__dirname + "/public/"));
+  app.use(express.static(__dirname + "../server/public/"));
 
   // Handle SPA
   app.get(/.*/, (req, res) => res.sendFile(__dirname + "/public/index.html"));
 }
-
-
-// Router
-app.use("/api/sample", sample);
 
 connectToDatabase();
 
