@@ -37,7 +37,6 @@ $snake-height: rem-calc(6);
 
 // Layout and structure
 html {
-  background-color: $base-color-hover;
   overflow-x: hidden;
 
   @include breakpoint(320 down) {
@@ -59,60 +58,18 @@ body {
 
 
 // Typography
+// h1, h2, h3, h4, h5, h6 {
+//   @include secondaryFont;
+// }
+
 h1, h2, h3, h4, h5, h6 {
-  @include secondaryBold;
-}
-
-sub {
-  &.more-space {
-    bottom: -0.55em !important;
-  }
-}
-
-h1,
-.h1 {
-  font-size: 40px;
-  line-height: 38px;
-
-  @include breakpoint(small down) {
-    font-size: 28px;
-    line-height: 31px;
-  }
-
   &.alt {
     color: $base-color;
   }
 }
 
-h2,
-.h2 {
-  font-size: 24px;
-  line-height: 27px;
-  color: $base-color-hover;
-
-  @include breakpoint(small down) {
-    font-size: 24px;
-    line-height: 26px;
-  }
-
-  &.alt {
-    color: $white;
-  }
-}
-
-.subheader {
-  font-size: 20px;
-}
-
-.action {
-  .button {
-    width: 210px;
-    margin: 0 auto;
-  }
-}
-
 strong, b {
-  @include primaryFontBold;
+  @include primaryFont;
   font-weight: 900;
 }
 
@@ -123,6 +80,10 @@ sup {
 
 sub {
   bottom: -0.35em;
+
+  &.more-space {
+    bottom: -0.55em !important;
+  }
 }
 
 .disclaimer {
@@ -136,28 +97,16 @@ sub {
 
   &.light {
     color: #b9b9b9;
-    @include primaryFontBold;
+    @include primaryFont;
   }
 }
 
 .nowrap {
   white-space: nowrap;
 }
+
 .afterlink {
   margin-left: rem-calc(-4);
-}
-
-.white {
-  color: #fff;
-  text-decoration: underline;
-
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-.pink {
-  color: $pink;
 }
 
 .uppercase {
@@ -166,101 +115,57 @@ sub {
 
 
 // Buttons
-.button {
-  padding: 0.3rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  font-size: 14px;
-  line-height: 1;
-  font-weight: 900;
+// .button {
+//   padding: 0.3rem 1.5rem;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 40px;
+//   font-size: 14px;
+//   line-height: 1;
+//   font-weight: 900;
 
-  &:disabled {
-    background-color: #7d7d7d;
-  }
+//   &:disabled {
+//     background-color: #7d7d7d;
+//   }
 
-  i {
-    padding-left: 2px;
-  }
+//   i {
+//     padding-left: 2px;
+//   }
 
-  &.reverse {
-    background-color: $white;
-    color: $base-color;
+//   &.reverse {
+//     background-color: $white;
+//     color: $base-color;
 
-    &:hover,
-    &:focus {
-      background-color: rgba(255, 255, 255, 0.8);
-    }
-  }
+//     &:hover,
+//     &:focus {
+//       background-color: rgba(255, 255, 255, 0.8);
+//     }
+//   }
 
-  &.inline {
-    display: inline-flex;
-  }
-}
+//   &.inline {
+//     display: inline-flex;
+//   }
+// }
 
-.button.white {
-  background: $white;
-  color: $base-color;
-  text-decoration: none;
+// .button.white {
+//   background: $white;
+//   color: $base-color;
+//   text-decoration: none;
 
-  &:hover {
-    opacity: 0.8;
-    transition: 0.3s ease;
-  }
-}
+//   &:hover {
+//     opacity: 0.8;
+//     transition: 0.3s ease;
+//   }
+// }
 
-.button.blue {
-  background: $secondary-color-accent;
-  color: $white;
-  text-decoration: none;
+// .button.blue {
+//   background: $secondary-color-accent;
+//   color: $white;
+//   text-decoration: none;
 
-  &:hover {
-    opacity: 0.8;
-    transition: 0.3s ease;
-  }
-}
-
-// Card styles
-.card {
-  background-color: $white !important;
-  color: $black;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .header {
-    color: $black;
-  }
-
-  label {
-    color: $black;
-  }
-
-  .card-divider {
-    background-color: get-color(success);
-    color: $white;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    .header {
-      color: $black;
-    }
-  }
-}
-
-
-.third-party-optin {
-  z-index: 300 !important;
-}
-
-.tooltip-container {
-  top: rem-calc(-100) !important;
-}
+//   &:hover {
+//     opacity: 0.8;
+//     transition: 0.3s ease;
+//   }
+// }

@@ -155,8 +155,8 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: 'AmsiBlack', Arial, sans-serif;
-$header-font-weight: normal;
+$header-font-family: 'Oswald', sans-serif;
+$header-font-weight: 700;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
@@ -327,7 +327,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // 11. Button
 // ----------
 
-$button-font-family: 'AmsiBlack', Arial, sans-serif;
+$button-font-family: 'Oswald', sans-serif;
 $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;

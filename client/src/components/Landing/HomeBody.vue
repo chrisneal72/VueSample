@@ -2,7 +2,7 @@
   <div class="hello">
 
   <h1>{{ msg }}</h1>
-  
+
   <div class="pl-view-welcome grid-container">
     <div class="grid-x grid-margin-x align-center">
       <div class="cell small-12 medium-6 text-center pl-view-welcome__intro-content">
@@ -54,7 +54,9 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+/* @import "../../scss/settings"; */
+/* 
 h3 {
   margin: 40px 0 0;
 }
@@ -68,5 +70,5 @@ li {
 }
 a {
   color: #42b983;
-}
+} */
 </style>

@@ -1,9 +1,7 @@
 @import './scss/devices';
 @import './scss/settings';
 @import './scss/test';
-// @import 'foundation';
 @import "../node_modules/foundation-sites/scss/foundation";
-@import "~foundation-sites/scss/foundation";
 @include foundation-global-styles;
 @include foundation-xy-grid-classes;
 @include foundation-grid;

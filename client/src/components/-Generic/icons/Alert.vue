@@ -68,7 +68,7 @@
 
   .alert__text {
     text {
-      @include primaryFontBold;
+      @include primaryFont;
       font-size: rem-calc(48);
       fill: $white;
       color: $white;
